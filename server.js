@@ -1,7 +1,6 @@
 var express = require("express");
 var path = require("path");
 var bodyParser = require("body-parser");
-// var http = require("http");
 
 // stores the server
 var app = express();
@@ -14,7 +13,13 @@ var PORT = 3000;
 
 // pulls in the routes page
 require('./app/routing/htmlRoutes.js')(app);
-require('./app/routing/apiRoutes.js')(app);
+// require('./app/routing/apiRoutes.js');
+
+
+
+// app.get("/add", function(req, res) {
+//   res.sendFile(path.join(__dirname, "app/public/home.html"));
+// });
 
 
 // starts and listens to the server and port
