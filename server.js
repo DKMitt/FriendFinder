@@ -17,11 +17,6 @@ require('./app/routing/htmlRoutes.js')(app);
 
 
 
-// app.get("/add", function(req, res) {
-//   res.sendFile(path.join(__dirname, "app/public/home.html"));
-// });
-
-
 // starts and listens to the server and port
 app.listen(PORT, function() {
 	console.log("Server listening on: http://localhost:%s", PORT);
