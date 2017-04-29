@@ -1,16 +1,20 @@
 var express = require("express");
 var path = require("path");
 var bodyParser = require("body-parser");
-var http = require("http");
+// var http = require("http");
 
 // stores the server
 var app = express();
+
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
 
 // Here we define a port to listen to
 var PORT = 3000;
 
 // pulls in the routes page
 require('./app/routing/htmlRoutes.js')(app);
+require('./app/routing/apiRoutes.js')(app);
 
 
 // starts and listens to the server and port
